@@ -1,0 +1,1 @@
+auto save on window change extension
