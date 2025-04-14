@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins',sans-serif;
+  overflow-x: hidden;
+}
+
+:root {
+  --color: rgb(0, 0, 0);
+  --seccolor: rgb(24, 28, 39);
+}
+
+body {
+  background: url('https://img.freepik.com/free-vector/abstract-blue-light-pipe-speed-zoom-black-background-technology_1142-9980.jpg?semt=ais_hybrid&w=740');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  color: #e0e0e0; /* Slightly off-white for better readability */
+}
+
+header {
+  backdrop-filter: blur(10px);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.301);
+  list-style: none;
+  height: fit-content;
+  position: absolute;
+  top: 0;
+  z-index: 10;
+ 
+}
+li {
+  display: inline-flex;
+  box-sizing: content-box;
+}
+.links{
+  text-decoration:none;
+  color:white;
+  padding:10px;
+  font-size:2em;
+  transition: background-color 1s ease, box-shadow 1s ease;
+}
+.links:hover{
+  background-color: black;
+  box-shadow: 0 0 10px cyan;
+}
+@keyframes flash{
+  0%{
+    opacity:0;
+  }
+  100%{
+    opacity:1;
+  }
+}
+video {
+  position: relative;
+  display: block;
+  width: 100vw;
+  height: 40vh;
+  z-index: 0;
+  object-fit: cover;
+  opacity: 0.9;
+}
+
+.video {
+  height: 40vh;
+  display: block;
+  width: 100vw;
+  z-index: 0;
+}
+
+h1 {
+  position: absolute;
+  top: 16vh;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 5rem;
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translate(0%, 0%)
+  }
+
+  50% {
+    transform: translate(0%, 10%);
+  }
+}
+.gradient{
+  font-size:10vh;
+  display: inline-flex;
+  text-align: center;
+  color: white;
+  border-radius:40px;
+}
+.Gradient{
+  background: linear-gradient(90deg,cyan,magenta,yellow,magenta,cyan);
+  background-size: 300%;
+  overflow:hidden;
+  border-radius:40px;
+  background-clip:text;
+  -webkit-background-clip: text;
+  color: transparent;
+  font-size:10vh;
+  text-align: center;
+  animation: grad 8s linear infinite;
+  display: inline-flex;
+}
+@keyframes grad{
+  0%{background-position: 0%;}
+  50%{background-position: 100%;}
+  100%{background-position: 0%;}
+}
+.flashbox{
+  backdrop-filter: blur(30px);
+  margin:20px;
+  border:2px solid black;
+  border-radius: 20px;
+  width:fit-content;
+  background-color: rgba(94, 90, 90, 0.5);
+  display: inline-block;
+  transition: scale 0.5s ease-in-out,box-shadow 0.5s ease-in-out;
+}
+.flashcontent{
+  color:white;font-size:2rem;
+}
+.flashbox:hover{
+  scale:1.05;
+  box-shadow: 0px 0px 10px 10px cyan;
+}
+footer{
+  background-color: var(--color);
+  padding:50px;
+  color:white;
+  text-align: center;
+}
+@keyframes rotate {
+  0% {
+    border-image-source: linear-gradient(0deg, cyan, magenta, yellow);
+  }
+  100% {
+    border-image-source: linear-gradient(360deg, cyan, magenta, yellow);
+  }
+}
+
+.gradientcont {
+  animation: rotate 5s linear infinite;
+  background-color: var(--color);
+  width: 50vw;
+  border: 3px solid transparent;
+  border-image: linear-gradient(90deg, cyan, magenta, yellow) 1;
+  border-radius: 20px; /* Adjust this value for the rounded border */
+  display: inline-block;
+}
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #111;
+}
+::-webkit-scrollbar-thumb {
+  background: cyan;
+  border-radius: 5px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.flasher{
+  display: inline-flex;
+  width:50vw;
+  justify-content: center;
+  color:white;
+  font-size: 1.5rem;
+}
+.flashcon{
+  display: inline-flex;
+  justify-content: center;align-items:center;
+}
